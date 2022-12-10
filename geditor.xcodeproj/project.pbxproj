@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0556632944CBDE00A082C5 /* root in Resources */ = {isa = PBXBuildFile; fileRef = 2E0556622944CBDE00A082C5 /* root */; };
+		2E0556652944CE0600A082C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E0556642944CE0600A082C5 /* Preview Assets.xcassets */; };
 		2E2A7DC82943643000CB9DC3 /* geditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DC72943643000CB9DC3 /* geditorApp.swift */; };
 		2E2A7DCA2943643000CB9DC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DC92943643000CB9DC3 /* ContentView.swift */; };
 		2E2A7DCC2943643900CB9DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2A7DCB2943643900CB9DC3 /* Assets.xcassets */; };
-		2E2A7DCF2943643900CB9DC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2A7DCE2943643900CB9DC3 /* Preview Assets.xcassets */; };
 		2E2A7DD92943643900CB9DC3 /* geditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DD82943643900CB9DC3 /* geditorTests.swift */; };
 		2E2A7DE32943643900CB9DC3 /* geditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DE22943643900CB9DC3 /* geditorUITests.swift */; };
 		2E2A7DE52943643900CB9DC3 /* geditorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DE42943643900CB9DC3 /* geditorUITestsLaunchTests.swift */; };
@@ -18,6 +19,8 @@
 		2E2A7DF529436E9700CB9DC3 /* FinderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DF429436E9700CB9DC3 /* FinderList.swift */; };
 		2E2A7DF7294380CB00CB9DC3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DF6294380CA00CB9DC3 /* Settings.swift */; };
 		2E2A7DFA2943835000CB9DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DF92943834F00CB9DC3 /* AppDelegate.swift */; };
+		2E2A7DFC2944133600CB9DC3 /* FinderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DFB2944133500CB9DC3 /* FinderListView.swift */; };
+		2E2A7DFE2944C10D00CB9DC3 /* FinderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DFD2944C10C00CB9DC3 /* FinderItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E0556622944CBDE00A082C5 /* root */ = {isa = PBXFileReference; lastKnownFileType = folder; path = root; sourceTree = "<group>"; };
+		2E0556642944CE0600A082C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2E2A7DC42943643000CB9DC3 /* geditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2A7DC72943643000CB9DC3 /* geditorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geditorApp.swift; sourceTree = "<group>"; };
 		2E2A7DC92943643000CB9DC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E2A7DCB2943643900CB9DC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2E2A7DCE2943643900CB9DC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2E2A7DD42943643900CB9DC3 /* geditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = geditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2A7DD82943643900CB9DC3 /* geditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geditorTests.swift; sourceTree = "<group>"; };
 		2E2A7DDE2943643900CB9DC3 /* geditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = geditorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +56,8 @@
 		2E2A7DF429436E9700CB9DC3 /* FinderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderList.swift; sourceTree = "<group>"; };
 		2E2A7DF6294380CA00CB9DC3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2E2A7DF92943834F00CB9DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E2A7DFB2944133500CB9DC3 /* FinderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderListView.swift; sourceTree = "<group>"; };
+		2E2A7DFD2944C10C00CB9DC3 /* FinderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,22 +108,14 @@
 		2E2A7DC62943643000CB9DC3 /* geditor */ = {
 			isa = PBXGroup;
 			children = (
-				2E2A7DF82943833300CB9DC3 /* Views */,
-				2E2A7DF12943662800CB9DC3 /* Models */,
-				2E2A7DC72943643000CB9DC3 /* geditorApp.swift */,
-				2E2A7DCB2943643900CB9DC3 /* Assets.xcassets */,
-				2E2A7DCD2943643900CB9DC3 /* Preview Content */,
 				2E2A7DF92943834F00CB9DC3 /* AppDelegate.swift */,
+				2E2A7DCB2943643900CB9DC3 /* Assets.xcassets */,
+				2E2A7DC72943643000CB9DC3 /* geditorApp.swift */,
+				2E2A7DF12943662800CB9DC3 /* Models */,
+				2E40DC912944C90D0079F33C /* Preview Content */,
+				2E2A7DF82943833300CB9DC3 /* Views */,
 			);
 			path = geditor;
-			sourceTree = "<group>";
-		};
-		2E2A7DCD2943643900CB9DC3 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				2E2A7DCE2943643900CB9DC3 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		2E2A7DD72943643900CB9DC3 /* geditorTests */ = {
@@ -151,8 +149,19 @@
 			isa = PBXGroup;
 			children = (
 				2E2A7DC92943643000CB9DC3 /* ContentView.swift */,
+				2E2A7DFB2944133500CB9DC3 /* FinderListView.swift */,
+				2E2A7DFD2944C10C00CB9DC3 /* FinderItemView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2E40DC912944C90D0079F33C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2E0556642944CE0600A082C5 /* Preview Assets.xcassets */,
+				2E0556622944CBDE00A082C5 /* root */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +268,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E2A7DCF2943643900CB9DC3 /* Preview Assets.xcassets in Resources */,
+				2E0556632944CBDE00A082C5 /* root in Resources */,
+				2E0556652944CE0600A082C5 /* Preview Assets.xcassets in Resources */,
 				2E2A7DCC2943643900CB9DC3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,8 +296,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2A7DFA2943835000CB9DC3 /* AppDelegate.swift in Sources */,
+				2E2A7DFE2944C10D00CB9DC3 /* FinderItemView.swift in Sources */,
 				2E2A7DF32943664F00CB9DC3 /* FinderItem.swift in Sources */,
 				2E2A7DCA2943643000CB9DC3 /* ContentView.swift in Sources */,
+				2E2A7DFC2944133600CB9DC3 /* FinderListView.swift in Sources */,
 				2E2A7DC82943643000CB9DC3 /* geditorApp.swift in Sources */,
 				2E2A7DF529436E9700CB9DC3 /* FinderList.swift in Sources */,
 				2E2A7DF7294380CB00CB9DC3 /* Settings.swift in Sources */,
