@@ -15,6 +15,9 @@
 		2E2A7DE32943643900CB9DC3 /* geditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DE22943643900CB9DC3 /* geditorUITests.swift */; };
 		2E2A7DE52943643900CB9DC3 /* geditorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DE42943643900CB9DC3 /* geditorUITestsLaunchTests.swift */; };
 		2E2A7DF32943664F00CB9DC3 /* FinderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DF22943664F00CB9DC3 /* FinderItem.swift */; };
+		2E2A7DF529436E9700CB9DC3 /* FinderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DF429436E9700CB9DC3 /* FinderList.swift */; };
+		2E2A7DF7294380CB00CB9DC3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DF6294380CA00CB9DC3 /* Settings.swift */; };
+		2E2A7DFA2943835000CB9DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DF92943834F00CB9DC3 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		2E2A7DE22943643900CB9DC3 /* geditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geditorUITests.swift; sourceTree = "<group>"; };
 		2E2A7DE42943643900CB9DC3 /* geditorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geditorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2E2A7DF22943664F00CB9DC3 /* FinderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderItem.swift; sourceTree = "<group>"; };
+		2E2A7DF429436E9700CB9DC3 /* FinderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderList.swift; sourceTree = "<group>"; };
+		2E2A7DF6294380CA00CB9DC3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		2E2A7DF92943834F00CB9DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +102,12 @@
 		2E2A7DC62943643000CB9DC3 /* geditor */ = {
 			isa = PBXGroup;
 			children = (
+				2E2A7DF82943833300CB9DC3 /* Views */,
 				2E2A7DF12943662800CB9DC3 /* Models */,
 				2E2A7DC72943643000CB9DC3 /* geditorApp.swift */,
-				2E2A7DC92943643000CB9DC3 /* ContentView.swift */,
 				2E2A7DCB2943643900CB9DC3 /* Assets.xcassets */,
 				2E2A7DCD2943643900CB9DC3 /* Preview Content */,
+				2E2A7DF92943834F00CB9DC3 /* AppDelegate.swift */,
 			);
 			path = geditor;
 			sourceTree = "<group>";
@@ -134,8 +141,18 @@
 			isa = PBXGroup;
 			children = (
 				2E2A7DF22943664F00CB9DC3 /* FinderItem.swift */,
+				2E2A7DF429436E9700CB9DC3 /* FinderList.swift */,
+				2E2A7DF6294380CA00CB9DC3 /* Settings.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2E2A7DF82943833300CB9DC3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E2A7DC92943643000CB9DC3 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,9 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2A7DFA2943835000CB9DC3 /* AppDelegate.swift in Sources */,
 				2E2A7DF32943664F00CB9DC3 /* FinderItem.swift in Sources */,
 				2E2A7DCA2943643000CB9DC3 /* ContentView.swift in Sources */,
 				2E2A7DC82943643000CB9DC3 /* geditorApp.swift in Sources */,
+				2E2A7DF529436E9700CB9DC3 /* FinderList.swift in Sources */,
+				2E2A7DF7294380CB00CB9DC3 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -59,6 +59,27 @@ struct FinderItem:Identifiable,Hashable {
         try? FileManager.default.removeItem(at: url)
     }
     
+    func duplicate() {
+        var duplicatedURL = self.duplicateURL(suffix: "")
+        var i = 2
+        while FileManager.default.fileExists(atPath: duplicatedURL.path) {
+            duplicatedURL = self.duplicateURL(suffix: "\(i)")
+            i+=1
+        }
+        try?FileManager.default.copyItem(at: url, to: duplicatedURL)
+    }
     
+    private func duplicateURL(suffix:String) -> URL {
+        url.deletingLastPathComponent().appendingPathComponent(
+            String(format: NSLocalizedString("Copy of %@", comment: ""), fileName) + suffix)
+    }
+    
+    func rename(name:String) {
+        try?FileManager.default.moveItem(at: url, to: url.deletingLastPathComponent().appendingPathComponent(name))
+    }
+    
+    func move(directory:URL) {
+        try?FileManager.default.moveItem(at: url, to: directory.appendingPathComponent(fileName))
+    }
     
 }
