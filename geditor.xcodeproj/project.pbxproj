@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2E0556632944CBDE00A082C5 /* root in Resources */ = {isa = PBXBuildFile; fileRef = 2E0556622944CBDE00A082C5 /* root */; };
 		2E0556652944CE0600A082C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E0556642944CE0600A082C5 /* Preview Assets.xcassets */; };
+		2E0556672945527C00A082C5 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0556662945527C00A082C5 /* EditView.swift */; };
+		2E0556692945661C00A082C5 /* PreviewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0556682945661C00A082C5 /* PreviewWebView.swift */; };
+		2E05566C294572A300A082C5 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 2E05566B294572A300A082C5 /* Ink */; };
+		2E05566F2945FC4A00A082C5 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 2E05566E2945FC4A00A082C5 /* Introspect */; };
 		2E2A7DC82943643000CB9DC3 /* geditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DC72943643000CB9DC3 /* geditorApp.swift */; };
 		2E2A7DCA2943643000CB9DC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A7DC92943643000CB9DC3 /* ContentView.swift */; };
 		2E2A7DCC2943643900CB9DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2A7DCB2943643900CB9DC3 /* Assets.xcassets */; };
@@ -43,6 +47,8 @@
 /* Begin PBXFileReference section */
 		2E0556622944CBDE00A082C5 /* root */ = {isa = PBXFileReference; lastKnownFileType = folder; path = root; sourceTree = "<group>"; };
 		2E0556642944CE0600A082C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E0556662945527C00A082C5 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		2E0556682945661C00A082C5 /* PreviewWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewWebView.swift; sourceTree = "<group>"; };
 		2E2A7DC42943643000CB9DC3 /* geditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2A7DC72943643000CB9DC3 /* geditorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geditorApp.swift; sourceTree = "<group>"; };
 		2E2A7DC92943643000CB9DC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E05566C294572A300A082C5 /* Ink in Frameworks */,
+				2E05566F2945FC4A00A082C5 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +159,8 @@
 				2E2A7DC92943643000CB9DC3 /* ContentView.swift */,
 				2E2A7DFB2944133500CB9DC3 /* FinderListView.swift */,
 				2E2A7DFD2944C10C00CB9DC3 /* FinderItemView.swift */,
+				2E0556662945527C00A082C5 /* EditView.swift */,
+				2E0556682945661C00A082C5 /* PreviewWebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +190,10 @@
 			dependencies = (
 			);
 			name = geditor;
+			packageProductDependencies = (
+				2E05566B294572A300A082C5 /* Ink */,
+				2E05566E2945FC4A00A082C5 /* Introspect */,
+			);
 			productName = geditor;
 			productReference = 2E2A7DC42943643000CB9DC3 /* geditor.app */;
 			productType = "com.apple.product-type.application";
@@ -252,6 +266,10 @@
 				Base,
 			);
 			mainGroup = 2E2A7DBB2943642F00CB9DC3;
+			packageReferences = (
+				2E05566A294572A300A082C5 /* XCRemoteSwiftPackageReference "ink" */,
+				2E05566D2945FC4A00A082C5 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = 2E2A7DC52943643000CB9DC3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,11 +315,13 @@
 			files = (
 				2E2A7DFA2943835000CB9DC3 /* AppDelegate.swift in Sources */,
 				2E2A7DFE2944C10D00CB9DC3 /* FinderItemView.swift in Sources */,
+				2E0556692945661C00A082C5 /* PreviewWebView.swift in Sources */,
 				2E2A7DF32943664F00CB9DC3 /* FinderItem.swift in Sources */,
 				2E2A7DCA2943643000CB9DC3 /* ContentView.swift in Sources */,
 				2E2A7DFC2944133600CB9DC3 /* FinderListView.swift in Sources */,
 				2E2A7DC82943643000CB9DC3 /* geditorApp.swift in Sources */,
 				2E2A7DF529436E9700CB9DC3 /* FinderList.swift in Sources */,
+				2E0556672945527C00A082C5 /* EditView.swift in Sources */,
 				2E2A7DF7294380CB00CB9DC3 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -443,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -458,12 +478,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"geditor/Preview Content\"";
 				DEVELOPMENT_TEAM = YFD5DAZ5K8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "test for edit";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -487,12 +509,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"geditor/Preview Content\"";
 				DEVELOPMENT_TEAM = YFD5DAZ5K8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "test for edit";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -627,6 +651,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E05566A294572A300A082C5 /* XCRemoteSwiftPackageReference "ink" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnsundell/ink.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.1;
+			};
+		};
+		2E05566D2945FC4A00A082C5 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E05566B294572A300A082C5 /* Ink */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E05566A294572A300A082C5 /* XCRemoteSwiftPackageReference "ink" */;
+			productName = Ink;
+		};
+		2E05566E2945FC4A00A082C5 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E05566D2945FC4A00A082C5 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E2A7DBC2943642F00CB9DC3 /* Project object */;
 }

@@ -33,11 +33,11 @@ struct FinderListView: View {
                             FinderItemView(item: item)
                         }.isDetailLink(false)
                     }else {
-//                        NavigationLink(
-//                            destination: FinderListView(list: FinderList(url: item.url))
-//                        ) {
-//                            FinderItemView(item: item)
-//                        }
+                        NavigationLink(
+                            destination:EditView(item: item)
+                        ) {
+                            FinderItemView(item: item)
+                        }
                     }
                 }
             }
