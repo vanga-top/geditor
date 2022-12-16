@@ -43,6 +43,131 @@ struct FinderListView: View {
             }
             .listStyle(.plain)
         }
+        .navigationTitle(list.url.lastPathComponent)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(
+                    action: {
+                        withAnimation{
+                            isEditing.toggle()
+                        }
+                        selectedItem = nil
+                        isPresentedEditDialog = false
+                    },
+                    label: {
+                        Image(systemName: isEditing ? "xmark" : "pencil")
+                    }
+                )
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                HStack {
+                    if !isEditing {
+                        Button(
+                            action: {
+                                isPresentedAddDialog.toggle()
+                            },
+                            label: {
+                                Image (systemName: "plus")
+                            }
+                        )
+                        .confirmationDialog(
+                            selectedItem?.url.lastPathComponent ?? "",
+                            isPresented: $isPresentedAddDialog) {
+                                Button("File") {
+                                    isPresentedFilePrompt.toggle()
+                                }
+                                Button("Directory") {
+                                    isPresentedDirectoryPrompt.toggle()
+                                }
+                                Button("Download") {
+                                    isPresentedDownloadPrompt.toggle()
+                                }
+                            }
+                    }
+                    if isEditing {
+                        Button(
+                            action: {
+                                isPresentedEditDialog.toggle()
+                            },
+                            label: {
+                                Image(systemName: "ellipsis")
+                            }
+                        ).disabled(selectedItem == nil)
+                            .confirmationDialog(
+                                selectedItem?.url.lastPathComponent ?? "",
+                                isPresented: $isPresentedEditDialog
+                            ) {
+                                Button("Rename") {
+                                    isPresentedRenamePrompt.toggle()
+                                }
+                                Button("Duplicate") {
+                                    //withAnimation()
+                                }
+                                Button("Move") {
+                                    isPresentMoveList.toggle()
+                                }
+                                Button("Delete",role: .destructive) {
+                                    withAnimation{
+                                        list.deleteItem(item: selectedItem)
+                                    }
+                                }
+                            }
+                    }
+                }
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button (
+                    action:{
+                        isPresentedInfo.toggle()
+                    },
+                    label: {
+                        Image(systemName: "gearshape")
+                    }
+                )
+            }
+        }
+        .toolbar{
+            ToolbarItem(placement: .bottomBar) {
+                Text(list.relativePath)
+            }
+        }
+        .sheet(isPresented: $isPresentedRenamePrompt) {
+            NavigationView {
+                PromptView(
+                    title: "Rename",
+                    textLabel: "Name",
+                    canSave: { name in
+                        name.isEmpty || list.items.first(where: { $0.fileName == name }) != nil
+                    },
+                    onSave: { name in
+                        list.renameItem(item: selectedItem, name: name)
+                    },
+                    text: selectedItem?.fileName ?? ""
+                )
+            }
+        }
+        .sheet(isPresented: $isPresentedFilePrompt) {
+            NavigationView {
+                PromptView(
+                    title: "New File",
+                    textLabel: "Name",
+                    canSave: { name in
+                        name.isEmpty || list.items.first(where: { $0.fileName == name }) != nil
+                    },
+                    onSave: { name in
+                        list.addItem(name: name, isDirectory: false)
+                    },
+                    text: ""
+                )
+            }
+        }
+        .onAppear {
+            list.refresh()
+        }
+        .environment(\.editMode, .constant(isEditing ? .active : .inactive))
     }
 }
 

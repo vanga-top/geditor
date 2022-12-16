@@ -81,4 +81,23 @@ extension FinderList {
         }
         item.destroy()
     }
+    
+    func renameItem(item: FinderItem?, name: String) {
+        guard let item = item else { return }
+
+        item.rename(name: name)
+        refresh()
+    }
+    
+    func addItem(name: String, isDirectory: Bool) {
+        let url = self.url.appendingPathComponent(name)
+
+        if isDirectory {
+            try? FileManager.default.createDirectory(at: url, withIntermediateDirectories: false)
+        } else {
+            try? "".write(to: url, atomically: true, encoding: .utf8)
+        }
+        refresh()
+    }
+
 }
