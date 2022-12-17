@@ -164,6 +164,41 @@ struct FinderListView: View {
                 )
             }
         }
+        .sheet(isPresented: $isPresentedDirectoryPrompt) {
+            NavigationView {
+                PromptView(
+                    title: "New Directory",
+                    textLabel: "Name",
+                    canSave: { name in
+                        name.isEmpty || list.items.first(where: { $0.fileName == name }) != nil
+                    },
+                    onSave: { name in
+                        list.addItem(name: name, isDirectory: true)
+                    },
+                    text: ""
+                )
+            }
+        }
+        .sheet(isPresented: $isPresentedDownloadPrompt) {
+            NavigationView {
+                PromptView (
+                    title: "Download",
+                    textLabel: "URL",
+                    canSave: {urlString in
+                        guard let url = URL(string: urlString) else {return false}
+                        return list.items.first(where: {$0.fileName == url.lastPathComponent}) != nil
+                    },
+                    onSave: {urlString in
+                        list.downloadItem(urlString: urlString)
+                    },
+                    text: "https://")
+            }
+        }
+        .sheet(isPresented: $isPresentedInfo) {
+            NavigationView {
+                InfoView()
+            }
+        }
         .onAppear {
             list.refresh()
         }

@@ -99,5 +99,14 @@ extension FinderList {
         }
         refresh()
     }
+    
+    func downloadItem(urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+
+        if let data = try? Data(contentsOf: url) {
+            try? data.write(to: self.url.appendingPathComponent(url.lastPathComponent))
+        }
+        refresh()
+    }
 
 }
