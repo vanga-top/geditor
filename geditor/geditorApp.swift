@@ -17,12 +17,10 @@ struct geditorApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                // todo
-//                let url = Bundle.main.url(forResource: "root_file", withExtension: "txt",subdirectory: "root")!
-//                let item = FinderItem(url: url)
-//                EditView(item:item)
-                let url = Bundle.main.url(forResource: "root", withExtension: nil)!
-                FinderListView(list: FinderList(url: url))
+                FinderListView(list: FinderList(url: FinderList.rootURL))
+                PlaceholderView()
+//                let url = Bundle.main.url(forResource: "root", withExtension: nil)!
+//                FinderListView(list: FinderList(url: url))
             }.onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) {
                 _ in
                     ATTrackingManager.requestTrackingAuthorization { _ in

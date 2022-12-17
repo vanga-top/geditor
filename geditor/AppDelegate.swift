@@ -12,7 +12,8 @@ class AppDelegate : NSObject,UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             if Settings.shared.firstLaunch {
-                
+                FinderList.createExamples()
+                Settings.shared.firstLaunch = false
             }
         return true
     }

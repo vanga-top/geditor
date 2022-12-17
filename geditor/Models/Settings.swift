@@ -90,4 +90,18 @@ class Settings {
             UserDefaults.standard.set(newValue.cgColor?.components ?? [], forKey: keys.BACKGROUND_COLOR)
         }
     }
+    
+    var keyboardAccessory: Bool {
+        get {
+            if let _ = UserDefaults.standard.value(forKey: keys.KEYBOARD_ACCESSORY) {
+                return UserDefaults.standard.bool(forKey: keys.KEYBOARD_ACCESSORY)
+            } else {
+                return true
+            }
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: keys.KEYBOARD_ACCESSORY)
+        }
+    }
+    
 }

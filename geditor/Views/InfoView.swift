@@ -8,8 +8,41 @@
 import SwiftUI
 
 struct InfoView: View {
+    
+    @State var keyboardAccessory = Settings.shared.keyboardAccessory
+    @State var isPresentedAcknowledgment = false
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section(header:Text("Setting")) {
+                Toggle("Keyboard Accessory", isOn: $keyboardAccessory)
+                NavigationLink("Font") {
+                    FontSettingsView()
+                }
+            }
+            Section{
+                Button("Acknowledgments") {
+                    isPresentedAcknowledgment.toggle()
+                }
+            }
+        }
+        .navigationTitle("Info")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button("Close") {
+                    dismiss()
+                }
+            }
+        }
+        .sheet(isPresented: $isPresentedAcknowledgment){
+            SafariView(url: URL(string: "https://github.com/vanga-top")!)
+        }
+        .onChange(of: keyboardAccessory) {
+            Settings.shared.keyboardAccessory = $0
+        }
     }
 }
 

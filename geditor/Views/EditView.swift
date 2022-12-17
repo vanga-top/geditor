@@ -59,7 +59,7 @@ struct EditView: View {
         .onAppear{
             self.content =
             item.isEditable
-            ? item.content : NSLocalizedString("The item cannot be edited", comment: "aaa")
+            ? item.content : NSLocalizedString("The item cannot be edited", comment: "")
         }
         .onAppear{
             UITextView.appearance().backgroundColor = .clear
@@ -67,7 +67,47 @@ struct EditView: View {
             UITextView.appearance().backgroundColor = nil
         }
         .toolbar {
-            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Picker("", selection: $mode) {
+                    ForEach(Mode.allCases) {
+                        mode in
+                        Text(NSLocalizedString(mode.rawValue, comment: "")).tag(mode)
+                    }
+                }
+                .pickerStyle(.segmented)
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                HStack {
+                    Button(
+                        action: {
+                            isPresentedActivity.toggle()
+                        },
+                        label: {
+                            Image(systemName: "square.and.arrow.up")
+                        }
+                    )
+                    Button(
+                        action: {
+                            reloader.toggle()
+                        },
+                        label: {
+                            Image(systemName: "arrow.clockwise")
+                        }
+                    )
+                    .disabled(mode == .edit)
+                    Spacer()
+                    Text(String(format: NSLocalizedString("Chars: %d", comment: ""),content.count))
+                }
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .keyboard) {
+                if let textView = textView, Settings.shared.keyboardAccessory {
+                    AccessoryView(textView: textView)
+                }
+            }
         }
     }
 }

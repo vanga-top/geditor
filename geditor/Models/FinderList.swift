@@ -67,6 +67,23 @@ extension FinderList {
             return
         }
         
+        root.addItem(name: "examples", isDirectory: true)
+        let examples = FinderList(url: examplesURL)
+        
+        try?UIImage(named: "AppIcon60x60")?.pngData()?.write(to: examplesURL.appendingPathComponent("logo.png"))
+        
+        examples.addItem(name: "hello.md", isDirectory: false)
+        
+        let items = examples.items
+        items.first { $0.fileName == "hello.md" }?.update(content: """
+            # GEditor
+            
+            ---
+            
+            Gplus Editor for Test
+          
+           ![](logo.png )
+        """)
         
     }
 }

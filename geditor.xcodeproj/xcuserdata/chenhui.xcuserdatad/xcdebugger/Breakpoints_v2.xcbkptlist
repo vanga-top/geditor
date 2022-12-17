@@ -14,8 +14,8 @@
             filePath = "geditor/Models/FinderList.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "renameItem(item:name:)"
             landmarkType = "7">
          </BreakpointContent>
